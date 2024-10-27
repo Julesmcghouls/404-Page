@@ -114,3 +114,63 @@ body, html {
         transform: translateY(-10px);
     }
 }
+
+/* Styles specific to random-page */
+.random-content {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.random-image {
+    width: 200px;
+    height: auto;
+    animation: spin 8s linear infinite; /* Spin animation */
+}
+
+.message {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+.home-button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.home-button:hover {
+    background-color: #ff3d30;
+}
+
+/* Spin animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Planet styles */
+.planet {
+    position: absolute;
+    width: 50px; /* Size of the planet */
+    height: 50px; /* Size of the planet */
+    background-image: url('planet.png'); 
+    background-size: cover;
+    animation: spin 5s linear infinite; /* Add spin animation */
+}
+
+/* Spin animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
