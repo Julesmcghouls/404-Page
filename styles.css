@@ -1,14 +1,12 @@
-/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and html styles */
 body, html {
     height: 100%;
-    font-family: 'Arial Black', sans-serif; /* Change to a bolder font */
+    font-family: 'Arial Black', sans-serif; /* Changed to a bolder font */
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -20,6 +18,14 @@ body, html {
     background-position: center;
     background-attachment: fixed;
     overflow: hidden; 
+}
+
+/* Header styles */
+.header {
+    font-size: 2.5rem; /* Increase font size */
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Container styles */
@@ -44,7 +50,7 @@ body, html {
 }
 
 .dog-image {
-    width: 200px; /* Increase image size */
+    width: 250px; /* Increase image size */
     height: auto;
     /* border-radius: 50%;
     border: 2px solid #fff; */
@@ -70,7 +76,7 @@ body, html {
     position: absolute;
     top: 100%; /* Position it just below the speech bubble */
     left: 30%; /* Center it horizontally */
-    margin-left: -10px; /* Center the triangle */
+    margin-left: 60px; /* Center the triangle */
     border-width: 10px; /* Adjust size */
     border-style: solid;
     border-color: #ffffff transparent transparent transparent; /* Create the triangle effect */
@@ -79,18 +85,20 @@ body, html {
 /* Button styles */
 .buttons {
     margin-top: 20px; /* Add margin to the top of the buttons for spacing */
+    display: flex;
+    justify-content: center;
 }
 
 .buttons button {
     background-color: #ff6f61;
     color: #fff;
     border: none;
-    padding: 15px 30px; /* Increase padding for larger buttons */
-    margin: 5px; /* Margin between buttons */
+    padding: 15px 25px; /* Increase padding for larger buttons */
+    margin: 10px; /* Margin between buttons */
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 18px; /* Increase font size for readability */
+    font-size: 1.2rem; /* Increase font size for readability */
 }
 
 .buttons button:hover {
