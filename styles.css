@@ -46,8 +46,8 @@ body, html {
 .dog-image {
     width: 200px; /* Increase image size */
     height: auto;
-    border-radius: 50%;
-    border: 2px solid #fff;
+    /* border-radius: 50%;
+    border: 2px solid #fff; */
 }
 
 /* Speech bubble styles */
