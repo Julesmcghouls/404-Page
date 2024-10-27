@@ -8,16 +8,18 @@
 /* Body and html styles */
 body, html {
     height: 100%;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial Black', sans-serif; /* Change to a bolder font */
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('https://media.giphy.com/media/sJvz8Qnfly3BOuotGx/giphy.gif'); /* Set the GIF as background */
+    flex-direction: column; /* Stack elements vertically */
+    background-image: url('https://media.giphy.com/media/sJvz8Qnfly3BOuotGx/giphy.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    overflow: hidden; /* Prevent scrollbars from appearing */
+    background-attachment: fixed;
+    overflow: hidden; 
 }
 
 /* Container styles */
@@ -25,6 +27,12 @@ body, html {
     text-align: center;
     position: relative;
     z-index: 1; /* Ensure text is above background */
+    width: 90%; /* Use more width */
+    max-width: 600px; /* Limit max width for larger screens */
+    height: 80%; /* Make container take more vertical space */
+    display: flex; /* Flex to align items */
+    flex-direction: column; /* Stack items */
+    justify-content: center; /* Center items vertically */
 }
 
 /* Dog astronaut styles */
@@ -36,7 +44,7 @@ body, html {
 }
 
 .dog-image {
-    width: 150px;
+    width: 200px; /* Increase image size */
     height: auto;
     border-radius: 50%;
     border: 2px solid #fff;
@@ -48,24 +56,41 @@ body, html {
     color: #0a0a3f;
     border-radius: 15px;
     padding: 10px 20px;
-    width: 200px;
+    width: 250px; /* Keep the width for better text fit */
     position: absolute;
-    top: -70px;
+    top: -5px; /* Adjust positioning */
     left: 50%; 
-    transform: translateX(-50%);
+    transform: translate(-50%, -100%); /* Adjust positioning */
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
 
+/* Adding a tail to the speech bubble */
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Position it just below the speech bubble */
+    left: 30%; /* Center it horizontally */
+    margin-left: -10px; /* Center the triangle */
+    border-width: 10px; /* Adjust size */
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent; /* Create the triangle effect */
+}
+
 /* Button styles */
+.buttons {
+    margin-top: 20px; /* Add margin to the top of the buttons for spacing */
+}
+
 .buttons button {
     background-color: #ff6f61;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    margin: 5px;
+    padding: 15px 30px; /* Increase padding for larger buttons */
+    margin: 5px; /* Margin between buttons */
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 18px; /* Increase font size for readability */
 }
 
 .buttons button:hover {
